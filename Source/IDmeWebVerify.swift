@@ -559,7 +559,7 @@ private extension IDmeWebVerify {
                 pendingRefreshes[scope] = []
             }
             
-            let scopeCallbacks = pendingRefreshes[scope] ?? []
+            var scopeCallbacks = pendingRefreshes[scope] ?? []
             if scopeCallbacks.isEmpty {
                 /// First one wanting to refresh
                 let currentRefreshToken = self.keychainData.refreshToken(forScope: scope)
@@ -572,7 +572,7 @@ private extension IDmeWebVerify {
                     }
                     return
                 }
-                
+                scopeCallbacks.append(callback)
                 let format = "client_id=%@&client_secret=%@&redirect_uri=%@&refresh_token=%@&grant_type=refresh_token"
                 let parameters = String(format: format, clientID, clientSecret, redirectURI, refreshToken)
                 makePostRequest(with: urlString(with: Constants.IDME_WEB_VERIFY_REFRESH_CODE_URL),
