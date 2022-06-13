@@ -13,8 +13,7 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "KeychainSwift",
-                 url: "https://github.com/evgenyneu/keychain-swift.git",
-                 from: "19.0.0")
+                 url: "https://github.com/evgenyneu/keychain-swift.git", .exact("20.0.0")),
     ],
     targets: [
         .target(
