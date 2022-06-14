@@ -1,6 +1,10 @@
 # ID.me WebVerify SDK (iOS)
 The ID.me WebVerify SDK for iOS is a library that allows you to verify a user's group affiliation status using ID.me's platform. A sample project has been provided to delineate the integration process.
 
+# Under Armour Fork
+- SPM Support
+- Updated Dependencies
+
 ## Release Information
 
 - **SDK Version:** 4.0.1 (April 04, 2017)
