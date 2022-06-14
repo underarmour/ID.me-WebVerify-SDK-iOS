@@ -3,32 +3,26 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B265B1A71E93EA0700833DC5 /* IDmePKCEUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = B265B19E1E93EA0700833DC5 /* IDmePKCEUtils.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		B265B1A81E93EA0700833DC5 /* IDmePKCEUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B265B19F1E93EA0700833DC5 /* IDmePKCEUtils.m */; };
-		B265B1A91E93EA0700833DC5 /* IDmeReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = B265B1A01E93EA0700833DC5 /* IDmeReachability.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		B265B1AA1E93EA0700833DC5 /* IDmeReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B265B1A11E93EA0700833DC5 /* IDmeReachability.m */; };
-		B265B1AC1E93EA0700833DC5 /* IDmeWebVerify.h in Headers */ = {isa = PBXBuildFile; fileRef = B265B1A31E93EA0700833DC5 /* IDmeWebVerify.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B265B1AD1E93EA0700833DC5 /* IDmeWebVerify.m in Sources */ = {isa = PBXBuildFile; fileRef = B265B1A41E93EA0700833DC5 /* IDmeWebVerify.m */; };
-		B265B1AE1E93EA0700833DC5 /* IDmeWebVerifyKeychainData.h in Headers */ = {isa = PBXBuildFile; fileRef = B265B1A51E93EA0700833DC5 /* IDmeWebVerifyKeychainData.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		B265B1AF1E93EA0700833DC5 /* IDmeWebVerifyKeychainData.m in Sources */ = {isa = PBXBuildFile; fileRef = B265B1A61E93EA0700833DC5 /* IDmeWebVerifyKeychainData.m */; };
-		B265B1B71E93EB6B00833DC5 /* SAMKeychain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B265B1B61E93EB6B00833DC5 /* SAMKeychain.framework */; };
+		3C15801826F961D0004AEA60 /* IDmePKCEUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C15801326F961D0004AEA60 /* IDmePKCEUtils.swift */; };
+		3C15801926F961D0004AEA60 /* IDmeWebVerify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C15801426F961D0004AEA60 /* IDmeWebVerify.swift */; };
+		3C15801A26F961D0004AEA60 /* IDmeWebVerifyEnumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C15801526F961D0004AEA60 /* IDmeWebVerifyEnumerations.swift */; };
+		3C15801B26F961D0004AEA60 /* IDmeReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C15801626F961D0004AEA60 /* IDmeReachability.swift */; };
+		3C15801C26F961D0004AEA60 /* IDmeWebVerifyKeychainData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C15801726F961D0004AEA60 /* IDmeWebVerifyKeychainData.swift */; };
+		3C15801F26F961FF004AEA60 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3C15801E26F961FF004AEA60 /* KeychainSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C15800926F9618A004AEA60 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C15801326F961D0004AEA60 /* IDmePKCEUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDmePKCEUtils.swift; sourceTree = "<group>"; };
+		3C15801426F961D0004AEA60 /* IDmeWebVerify.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDmeWebVerify.swift; sourceTree = "<group>"; };
+		3C15801526F961D0004AEA60 /* IDmeWebVerifyEnumerations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDmeWebVerifyEnumerations.swift; sourceTree = "<group>"; };
+		3C15801626F961D0004AEA60 /* IDmeReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDmeReachability.swift; sourceTree = "<group>"; };
+		3C15801726F961D0004AEA60 /* IDmeWebVerifyKeychainData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IDmeWebVerifyKeychainData.swift; sourceTree = "<group>"; };
 		B265B18C1E93E97400833DC5 /* IDmeWebVerify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IDmeWebVerify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B265B1901E93E97400833DC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Source/Info.plist; sourceTree = "<group>"; };
-		B265B19E1E93EA0700833DC5 /* IDmePKCEUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDmePKCEUtils.h; path = Source/IDmePKCEUtils.h; sourceTree = SOURCE_ROOT; };
-		B265B19F1E93EA0700833DC5 /* IDmePKCEUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDmePKCEUtils.m; path = Source/IDmePKCEUtils.m; sourceTree = SOURCE_ROOT; };
-		B265B1A01E93EA0700833DC5 /* IDmeReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDmeReachability.h; path = Source/IDmeReachability.h; sourceTree = SOURCE_ROOT; };
-		B265B1A11E93EA0700833DC5 /* IDmeReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDmeReachability.m; path = Source/IDmeReachability.m; sourceTree = SOURCE_ROOT; };
-		B265B1A31E93EA0700833DC5 /* IDmeWebVerify.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDmeWebVerify.h; path = Source/IDmeWebVerify.h; sourceTree = SOURCE_ROOT; };
-		B265B1A41E93EA0700833DC5 /* IDmeWebVerify.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDmeWebVerify.m; path = Source/IDmeWebVerify.m; sourceTree = SOURCE_ROOT; };
-		B265B1A51E93EA0700833DC5 /* IDmeWebVerifyKeychainData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IDmeWebVerifyKeychainData.h; path = Source/IDmeWebVerifyKeychainData.h; sourceTree = SOURCE_ROOT; };
-		B265B1A61E93EA0700833DC5 /* IDmeWebVerifyKeychainData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IDmeWebVerifyKeychainData.m; path = Source/IDmeWebVerifyKeychainData.m; sourceTree = SOURCE_ROOT; };
 		B265B1B61E93EB6B00833DC5 /* SAMKeychain.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SAMKeychain.framework; path = Carthage/Build/iOS/SAMKeychain.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -37,17 +31,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B265B1B71E93EB6B00833DC5 /* SAMKeychain.framework in Frameworks */,
+				3C15801F26F961FF004AEA60 /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3C15800126F9618A004AEA60 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				3C15801326F961D0004AEA60 /* IDmePKCEUtils.swift */,
+				3C15801626F961D0004AEA60 /* IDmeReachability.swift */,
+				3C15801426F961D0004AEA60 /* IDmeWebVerify.swift */,
+				3C15801526F961D0004AEA60 /* IDmeWebVerifyEnumerations.swift */,
+				3C15801726F961D0004AEA60 /* IDmeWebVerifyKeychainData.swift */,
+				3C15800926F9618A004AEA60 /* Info.plist */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
 		B265B1821E93E97400833DC5 = {
 			isa = PBXGroup;
 			children = (
-				B265B18E1E93E97400833DC5 /* Source */,
+				3C15800126F9618A004AEA60 /* Source */,
 				B265B18D1E93E97400833DC5 /* Products */,
 				B265B1B51E93EB6B00833DC5 /* Frameworks */,
 			);
@@ -59,23 +66,6 @@
 				B265B18C1E93E97400833DC5 /* IDmeWebVerify.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		B265B18E1E93E97400833DC5 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				B265B19E1E93EA0700833DC5 /* IDmePKCEUtils.h */,
-				B265B19F1E93EA0700833DC5 /* IDmePKCEUtils.m */,
-				B265B1A01E93EA0700833DC5 /* IDmeReachability.h */,
-				B265B1A11E93EA0700833DC5 /* IDmeReachability.m */,
-				B265B1A31E93EA0700833DC5 /* IDmeWebVerify.h */,
-				B265B1A41E93EA0700833DC5 /* IDmeWebVerify.m */,
-				B265B1A51E93EA0700833DC5 /* IDmeWebVerifyKeychainData.h */,
-				B265B1A61E93EA0700833DC5 /* IDmeWebVerifyKeychainData.m */,
-				B265B1901E93E97400833DC5 /* Info.plist */,
-			);
-			name = Source;
-			path = IDmeWebVerify;
 			sourceTree = "<group>";
 		};
 		B265B1B51E93EB6B00833DC5 /* Frameworks */ = {
@@ -93,10 +83,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B265B1AC1E93EA0700833DC5 /* IDmeWebVerify.h in Headers */,
-				B265B1AE1E93EA0700833DC5 /* IDmeWebVerifyKeychainData.h in Headers */,
-				B265B1A91E93EA0700833DC5 /* IDmeReachability.h in Headers */,
-				B265B1A71E93EA0700833DC5 /* IDmePKCEUtils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +102,9 @@
 			dependencies = (
 			);
 			name = IDmeWebVerify;
+			packageProductDependencies = (
+				3C15801E26F961FF004AEA60 /* KeychainSwift */,
+			);
 			productName = IDmeWebVerify;
 			productReference = B265B18C1E93E97400833DC5 /* IDmeWebVerify.framework */;
 			productType = "com.apple.product-type.framework";
@@ -131,6 +120,7 @@
 				TargetAttributes = {
 					B265B18B1E93E97400833DC5 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 1250;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -140,9 +130,13 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = B265B1821E93E97400833DC5;
+			packageReferences = (
+				3C15801D26F961FF004AEA60 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			productRefGroup = B265B18D1E93E97400833DC5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -157,10 +151,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B265B1A81E93EA0700833DC5 /* IDmePKCEUtils.m in Sources */,
-				B265B1AA1E93EA0700833DC5 /* IDmeReachability.m in Sources */,
-				B265B1AF1E93EA0700833DC5 /* IDmeWebVerifyKeychainData.m in Sources */,
-				B265B1AD1E93EA0700833DC5 /* IDmeWebVerify.m in Sources */,
+				3C15801926F961D0004AEA60 /* IDmeWebVerify.swift in Sources */,
+				3C15801C26F961D0004AEA60 /* IDmeWebVerifyKeychainData.swift in Sources */,
+				3C15801B26F961D0004AEA60 /* IDmeReachability.swift in Sources */,
+				3C15801826F961D0004AEA60 /* IDmePKCEUtils.swift in Sources */,
+				3C15801A26F961D0004AEA60 /* IDmeWebVerifyEnumerations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +203,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -253,7 +248,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -266,44 +261,53 @@
 		B265B1951E93E97400833DC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.id.IDmeWebVerify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		B265B1961E93E97400833DC5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.id.IDmeWebVerify;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -329,6 +333,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3C15801D26F961FF004AEA60 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 19.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3C15801E26F961FF004AEA60 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3C15801D26F961FF004AEA60 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B265B1831E93E97400833DC5 /* Project object */;
 }
