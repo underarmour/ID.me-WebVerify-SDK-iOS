@@ -339,6 +339,24 @@ open class IDmeWebVerify: NSObject {
                            sourceApplication: options[.sourceApplication] as? String,
                            annotation: options[.annotation] as Any)
     }
+
+    /**
+     Call this method from the [UIApplicationDelegate application:openURL:options:] method
+     of the AppDelegate for your app. It should be invoked for the proper processing of responses
+     during interaction with the native Facebook app or Safari as part of SSO authorization
+     flow or Facebook dialogs.
+
+     - Parameter application: The application as passed to [UIApplicationDelegate application:openURL:options:].
+     - Parameter url: The URL as passed to [UIApplicationDelegate application:openURL:options:].
+     - Parameter options: The options dictionary as passed to [UIApplicationDelegate application:openURL:options:].
+     - Returns: YES if the url was intended for the IDmeWebVerify SDK, NO if not.
+     */
+    @available(iOS 13.0, *)
+    public func scene(_ scene: UIScene,
+                            open url: URL,
+                            options: UIScene.OpenURLOptions) -> Bool {
+        return open(url: url, sourceApplication: options.sourceApplication, annotation: options.annotation as Any)
+    }
     
     /**
      Call this method from the [UIApplicationDelegate application:openURL:sourceApplication:annotation:]
@@ -356,14 +374,26 @@ open class IDmeWebVerify: NSObject {
                             open url: URL,
                             sourceApplication: String?,
                             annotation: Any) -> Bool {
+        return open(url: url, sourceApplication: sourceApplication, annotation: annotation)
+    }
+
+    /**
+     - Parameter url: The URL as passed to [UIApplicationDelegate application:openURL:sourceApplication:annotation:].
+     - Parameter sourceApplication: The sourceApplication as passed to [UIApplicationDelegate application:openURL:sourceApplication:annotation:].
+     - Parameter annotation: The annotation as passed to [UIApplicationDelegate application:openURL:sourceApplication:annotation:].
+     - Returns: YES if the url was intended for the IDmeWebVerify SDK, NO if not.
+     */
+    private func open(url: URL,
+                      sourceApplication: String?,
+                      annotation: Any) -> Bool {
         safariViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
         safariViewController = nil
-        
+
         if url.absoluteString.hasPrefix(redirectURI) && (url.query?.contains("type=logout") ?? false) {
             if logoutCallback == nil {
                 return true
             }
-            
+
             let callback = logoutCallback
             self.logoutCallback = nil
             self.webVerificationResults = nil
@@ -372,11 +402,11 @@ open class IDmeWebVerify: NSObject {
             }
             return true
         }
-        
+
         guard let codeVerifier = self.codeVerifier, let redirectURI = self.redirectURI else {
             return false
         }
-        
+
         if url.absoluteString.hasPrefix(redirectURI) {
             let beforeQueryString = "\(redirectURI)?"
             let queryString = url.absoluteString.replacingOccurrences(of: beforeQueryString, with: "")
@@ -387,7 +417,7 @@ open class IDmeWebVerify: NSObject {
                 self.codeChallengeMethod = nil
                 let format = "client_id=%@&client_secret=%@&redirect_uri=%@&code=%@&grant_type=authorization_code&code_verifier=%@"
                 let params = String(format: format, clientID, clientSecret, redirectURI, code, codeVerifier)
-                
+
                 let urlString = urlString(with: Constants.IDME_WEB_VERIFY_REFRESH_CODE_URL)
                 makePostRequest(with: urlString, parameters: params) { [weak self] (data, urlResponse, error) in
                     guard let self = self else { return }
@@ -415,7 +445,7 @@ open class IDmeWebVerify: NSObject {
                         self.callWebVerificationResults(withToken: nil, error: authError)
                     }
                 }
-                
+
             } else if let errorDescription = parameters[Constants.IDME_WEB_VERIFY_ERROR_DESCRIPTION_PARAM],
                       let errorString = parameters[Constants.IDME_WEB_VERIFY_ERROR_PARAM] {
                 let details = [NSLocalizedDescriptionKey: errorDescription.replacingOccurrences(of: "+", with: " ")]
@@ -429,7 +459,7 @@ open class IDmeWebVerify: NSObject {
             }
             return true
         }
-        
+
         return false
     }
 }
