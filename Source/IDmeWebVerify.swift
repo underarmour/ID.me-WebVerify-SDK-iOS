@@ -354,8 +354,8 @@ open class IDmeWebVerify: NSObject {
     @available(iOS 13.0, *)
     public func scene(_ scene: UIScene,
                             open url: URL,
-                            options: UIScene.OpenURLOptions) -> Bool {
-        return open(url: url, sourceApplication: options.sourceApplication, annotation: options.annotation as Any)
+                            options: UIScene.OpenURLOptions?) -> Bool {
+        return open(url: url, sourceApplication: options?.sourceApplication, annotation: options?.annotation as Any)
     }
     
     /**
@@ -385,7 +385,7 @@ open class IDmeWebVerify: NSObject {
      */
     private func open(url: URL,
                       sourceApplication: String?,
-                      annotation: Any) -> Bool {
+                      annotation: Any?) -> Bool {
         safariViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
         safariViewController = nil
 
