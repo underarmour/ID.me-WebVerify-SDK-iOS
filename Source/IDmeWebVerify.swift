@@ -482,7 +482,9 @@ private extension IDmeWebVerify {
         let controller = SFSafariViewController(url: url)
         controller.delegate = self
         safariViewController = controller
-        presenting.present(controller, animated: true, completion: nil)
+        DispatchQueue.main.async {
+            presenting.present(controller, animated: true, completion: nil)
+        }
     }
 }
 
